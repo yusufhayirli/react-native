@@ -40,9 +40,9 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>Yusuf HAYIRLI</Text>
               <Text style={styles.sectionDescription}>
-                Congrat my very first App.
+                Congrat my very first App!
               </Text>
             </View>
             <View style={styles.sectionContainer}>
