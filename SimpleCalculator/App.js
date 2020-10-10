@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar, 
   TextInput,
   Button,
 } from 'react-native';
+import Header from './src/components/header.js';
 
 export default class App extends Component{
   constructor(props){
@@ -25,8 +23,8 @@ export default class App extends Component{
     this.divide= this.divide.bind(this) 
   }
   sum(){
-    const number1 = parseInt(this.state.input1)
-    const number2 = parseInt(this.state.input2)
+    const number1 = parseFloat(this.state.input1)
+    const number2 = parseFloat(this.state.input2)
 
     const result = number1+number2;
 
@@ -35,8 +33,8 @@ export default class App extends Component{
     })
   }
   subs(){
-    const number1 = parseInt(this.state.input1)
-    const number2 = parseInt(this.state.input2)
+    const number1 = parseFloat(this.state.input1)
+    const number2 = parseFloat(this.state.input2)
 
     const result = number1-number2;
 
@@ -45,8 +43,8 @@ export default class App extends Component{
     })
   }
   multi(){
-    const number1 = parseInt(this.state.input1)
-    const number2 = parseInt(this.state.input2)
+    const number1 = parseFloat(this.state.input1)
+    const number2 = parseFloat(this.state.input2)
 
     const result = number1*number2;
 
@@ -55,8 +53,8 @@ export default class App extends Component{
     })
   }
   divide(){
-    const number1 = parseInt(this.state.input1)
-    const number2 = parseInt(this.state.input2)
+    const number1 = parseFloat(this.state.input1)
+    const number2 = parseFloat(this.state.input2)
 
     const result = number1/number2;
 
@@ -68,10 +66,7 @@ export default class App extends Component{
   return (
 
       <View style={styles.container}>
-        <View style={styles.header}>
-          <Text style={styles.headerText}>My App's Title !</Text> 
-        </View>
-
+        <Header headerText='Simple Calculator'/>
         <View style={styles.contentWrapper}>
           <TextInput style={styles.input}
             placeholder='First Number'
@@ -151,15 +146,5 @@ const styles = StyleSheet.create({
   buttonWrapper:{
     flexDirection:'row',
     justifyContent:'center',
-  },
-  header: {
-    height:80,
-    paddingTop:30,
-    shadowColor: '#000000',
-    shadowOffset:{width:0 , height:2},
-    shadowOpacity:0.3,
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor: '#F5FCFF',
   },
 });
